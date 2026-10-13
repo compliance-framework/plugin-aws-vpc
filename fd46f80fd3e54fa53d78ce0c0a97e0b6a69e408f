@@ -2,3 +2,6 @@ lisa-design:
 - Plugin already stores ConfigureRequest.policy_data (AsMap, nil when unset) and passes it to every NewPolicyProcessor call, so no code change was needed; title stays fix(deps).
 - Go directive was already 1.26.1, so go get did not raise it.
 - The pre-existing gofmt issue in internal/types.go is left for layer 2 (shared CI adds the gofmt gate there) to keep this PR a pure dependency bump.
+
+lisa-selfreview:
+- pass 1: approve, no findings. Diff is go.mod/go.sum only; GO-MOD-001 checked (no replace, no go.work); agent requirement is direct; build, vet, test, test -race, goreleaser check/build and golangci-lint (shared config, new-from-merge-base origin/main) all clean.
