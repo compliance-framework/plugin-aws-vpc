@@ -2,3 +2,6 @@ lisa-design:
 - ci.yml is a verbatim copy of mock-plugin-1's caller (workflows v1.5.1 pin) minus the mock's trial header comment; default branch is main so the push trigger is unchanged.
 - goreleaser archives.format -> formats: [tar.gz] only removes the deprecation; snapshot release before/after produced the same five archives with the same contents.
 - Pre-existing unused func buildRawResourceInput (internal/policy_evaluation.go) is left alone: CI lints new issues only, and deleting code is out of scope for a CI-adoption PR; reported as a follow-up.
+
+lisa-selfreview:
+- pass 1: approve. CORE-CI-001 ok (top-level permissions: {}, reusable workflows pinned by SHA). PLUGIN-CI-001 (no concurrency group) deferred: the spec requires a verbatim copy of mock-plugin-1's caller, and neither it nor ci-go-plugin.yml at v1.5.1 defines one; that is an org-wide workflows decision, not this PR's. Local gate (gofmt, tidy, vet, test, test -race, golangci-lint new-only, goreleaser check/build, actionlint) clean.
