@@ -1,2 +1,5 @@
 lisa-selfreview:
 Pass 1 (core,go,go-plugin packs): no findings, verdict approve. Callers, release-please-config.json, .goreleaser.yaml and ci.yml are byte-identical to merged plugin-file-attestation#9. All shared-workflow uses pinned to v1.5.2 6e7fc9c; push triggers use [main] (default branch). actionlint v1.7.12 clean; go build/test pass; goreleaser check + snapshot produce the same 5 archive names as v0.3.0's assets (LICENSE, README.md, plugin each). README has no release section, so unchanged.
+
+lisa-design:
+Seed 0.3.0: releases/latest is v0.3.0 (final vX.Y.Z tag, commit cae5f7b, ancestor of main); no bootstrap-sha. Since then: fix(deps) agent v0.9.1 bump (#14) and the W2 shared-CI commit, so the first release PR should propose 0.3.1.
