@@ -1,0 +1,2 @@
+lisa-addressed:
+- Superseding the earlier design note: the pre-existing gofmt drift in internal/types.go (whitespace alignment from e95b215) is fixed in layer 1 as a separate style commit, matching the plugin-aws-elb reference stack, so gofmt -l . is clean before the shared CI (which gates on it) arrives in layer 2.
