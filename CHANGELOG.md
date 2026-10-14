@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.1...v0.3.2) (2026-10-14)
+
+
+### Bug Fixes
+
+* name the plugin plugin-aws-vpc in its evidence ([#32](https://github.com/compliance-framework/plugin-aws-vpc/issues/32)) ([572d1b7](https://github.com/compliance-framework/plugin-aws-vpc/commit/572d1b7053f22cb571ad9efc4d58a93015d86902))
+* use the repo's module path ([#30](https://github.com/compliance-framework/plugin-aws-vpc/issues/30)) ([c6c74bb](https://github.com/compliance-framework/plugin-aws-vpc/commit/c6c74bbc1ea6a55c5917c9bc942c050ff84e8498))
+
 ## [0.3.1](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.0...v0.3.1) (2026-10-14)
 
 
