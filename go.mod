@@ -1,4 +1,4 @@
-module github.com/compliance-framework/plugin-aws-networking-security
+module github.com/compliance-framework/plugin-aws-vpc
 
 go 1.26.1
 
