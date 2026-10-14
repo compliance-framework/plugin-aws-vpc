@@ -1,0 +1,4 @@
+lisa-design:
+- Actor title/text follow plugin-aws-ec2's pattern: "Continuous Compliance Framework - AWS <X> Plugin" and "The Continuous Compliance Framework AWS <X> Plugin", with X = VPC to match the repo name.
+- Also renamed the startup debug log "Initiating AWS network security plugin" to "Initiating AWS VPC plugin" (ec2 uses "Initiating AWS EC2 plugin"); it was the only other leftover of the old name.
+- No test asserted the old strings, so no test changes; evidence actor link/title change on new evidence is intended.
