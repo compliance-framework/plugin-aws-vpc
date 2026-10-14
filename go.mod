@@ -5,7 +5,7 @@ go 1.26.1
 require (
 	github.com/aws/aws-sdk-go-v2 v1.41.6
 	github.com/aws/aws-sdk-go-v2/config v1.32.10
-	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.47.0
+	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.208.0
 	github.com/compliance-framework/agent v0.9.1
 	github.com/hashicorp/go-hclog v1.6.3
