@@ -2,3 +2,6 @@ lisa-design:
 - Actor title/text follow plugin-aws-ec2's pattern: "Continuous Compliance Framework - AWS <X> Plugin" and "The Continuous Compliance Framework AWS <X> Plugin", with X = VPC to match the repo name.
 - Also renamed the startup debug log "Initiating AWS network security plugin" to "Initiating AWS VPC plugin" (ec2 uses "Initiating AWS EC2 plugin"); it was the only other leftover of the old name.
 - No test asserted the old strings, so no test changes; evidence actor link/title change on new evidence is intended.
+
+lisa-selfreview:
+pass 1: CORE-TEST-001 (must-fix, fp 646099cbd035) main.go Eval: actor rename had no test pinning the new title/link; the actors were a local literal in Eval. -> fix
