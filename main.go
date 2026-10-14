@@ -35,16 +35,10 @@ func (l *CompliancePlugin) Init(req *proto.InitRequest, apiHelper runner.ApiHelp
 	return runner.InitWithSubjectsAndRisksFromPolicies(ctx, l.logger, req, apiHelper, buildSubjectTemplates())
 }
 
-func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.ApiHelper) (*proto.EvalResponse, error) {
-	ctx := context.TODO()
-	evalStatus := proto.ExecutionStatus_SUCCESS
-	var accumulatedErrors error
-
-	// Resolve regions from config or environment
-	regions := internal.ResolveRegions(l.config)
-
-	// Common actors for all evidence
-	actors := []*proto.OriginActor{
+// evidenceActors returns the origin actors attached to every piece of evidence:
+// the CCF platform and this plugin.
+func evidenceActors() []*proto.OriginActor {
+	return []*proto.OriginActor{
 		{
 			Title: "The Continuous Compliance Framework",
 			Type:  "assessment-platform",
@@ -68,6 +62,18 @@ func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.Api
 			},
 		},
 	}
+}
+
+func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.ApiHelper) (*proto.EvalResponse, error) {
+	ctx := context.TODO()
+	evalStatus := proto.ExecutionStatus_SUCCESS
+	var accumulatedErrors error
+
+	// Resolve regions from config or environment
+	regions := internal.ResolveRegions(l.config)
+
+	// Common actors for all evidence
+	actors := evidenceActors()
 
 	defaultBehaviorMapping := map[string][]string{
 		"aws-vpc-sg-policies":     {"sg"},
