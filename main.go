@@ -35,16 +35,10 @@ func (l *CompliancePlugin) Init(req *proto.InitRequest, apiHelper runner.ApiHelp
 	return runner.InitWithSubjectsAndRisksFromPolicies(ctx, l.logger, req, apiHelper, buildSubjectTemplates())
 }
 
-func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.ApiHelper) (*proto.EvalResponse, error) {
-	ctx := context.TODO()
-	evalStatus := proto.ExecutionStatus_SUCCESS
-	var accumulatedErrors error
-
-	// Resolve regions from config or environment
-	regions := internal.ResolveRegions(l.config)
-
-	// Common actors for all evidence
-	actors := []*proto.OriginActor{
+// evidenceActors returns the origin actors attached to every piece of evidence:
+// the CCF platform and this plugin.
+func evidenceActors() []*proto.OriginActor {
+	return []*proto.OriginActor{
 		{
 			Title: "The Continuous Compliance Framework",
 			Type:  "assessment-platform",
@@ -57,17 +51,29 @@ func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.Api
 			},
 		},
 		{
-			Title: "Continuous Compliance Framework - AWS Networking Security Plugin",
+			Title: "Continuous Compliance Framework - AWS VPC Plugin",
 			Type:  "tool",
 			Links: []*proto.Link{
 				{
-					Href: "https://github.com/compliance-framework/plugin-aws-networking-security",
+					Href: "https://github.com/compliance-framework/plugin-aws-vpc",
 					Rel:  internal.StringAddressed("reference"),
-					Text: internal.StringAddressed("The Continuous Compliance Framework AWS Networking Security Plugin"),
+					Text: internal.StringAddressed("The Continuous Compliance Framework AWS VPC Plugin"),
 				},
 			},
 		},
 	}
+}
+
+func (l *CompliancePlugin) Eval(request *proto.EvalRequest, apiHelper runner.ApiHelper) (*proto.EvalResponse, error) {
+	ctx := context.TODO()
+	evalStatus := proto.ExecutionStatus_SUCCESS
+	var accumulatedErrors error
+
+	// Resolve regions from config or environment
+	regions := internal.ResolveRegions(l.config)
+
+	// Common actors for all evidence
+	actors := evidenceActors()
 
 	defaultBehaviorMapping := map[string][]string{
 		"aws-vpc-sg-policies":     {"sg"},
@@ -223,7 +229,7 @@ func main() {
 		logger: logger,
 	}
 	// pluginMap is the map of plugins we can dispense.
-	logger.Debug("Initiating AWS network security plugin")
+	logger.Debug("Initiating AWS VPC plugin")
 
 	goplugin.Serve(&goplugin.ServeConfig{
 		HandshakeConfig: runner.HandshakeConfig,
