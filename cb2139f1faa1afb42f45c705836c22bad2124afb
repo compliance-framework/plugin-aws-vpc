@@ -1,0 +1,3 @@
+lisa-design:
+- Only the module declaration and the one internal import change. The evidence origin-actor link in main.go (https://github.com/compliance-framework/plugin-aws-networking-security, which GitHub redirects to plugin-aws-vpc) and its "AWS Networking Security Plugin" title are left alone: they are evidence content, not the module path, and changing them is out of scope.
+- go mod tidy produced no diff; goreleaser config has no -X ldflags referencing the module.
