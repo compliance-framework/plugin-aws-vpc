@@ -1,2 +1,5 @@
 lisa-addressed:
 - CORE-TEST-001 (646099cbd035): moved the actors literal into evidenceActors() (unchanged content) and added TestEvidenceActorsNameThisPlugin asserting the tool actor's title, href and link text.
+
+lisa-selfreview:
+pass 2: no findings (diff re-read; go vet, go test, gofmt clean). verdict approve.
