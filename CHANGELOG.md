@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.2](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.1...v0.3.2) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps:** bump agent to v0.9.3, workflows to v1.7.0 ([#34](https://github.com/compliance-framework/plugin-aws-vpc/issues/34)) ([0b79aa4](https://github.com/compliance-framework/plugin-aws-vpc/commit/0b79aa4b02949120902fd68c7301b9a13be09216))
+* **deps:** update aws-sdk-go-v2 monorepo ([#33](https://github.com/compliance-framework/plugin-aws-vpc/issues/33)) ([e842d15](https://github.com/compliance-framework/plugin-aws-vpc/commit/e842d1545a018eef06dfe9332c340ac33db4f3c3))
+* name the plugin plugin-aws-vpc in its evidence ([#32](https://github.com/compliance-framework/plugin-aws-vpc/issues/32)) ([572d1b7](https://github.com/compliance-framework/plugin-aws-vpc/commit/572d1b7053f22cb571ad9efc4d58a93015d86902))
+* use the repo's module path ([#30](https://github.com/compliance-framework/plugin-aws-vpc/issues/30)) ([c6c74bb](https://github.com/compliance-framework/plugin-aws-vpc/commit/c6c74bbc1ea6a55c5917c9bc942c050ff84e8498))
+
 ## [0.3.1](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.0...v0.3.1) (2026-10-14)
 
 
