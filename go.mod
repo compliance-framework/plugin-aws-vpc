@@ -9,7 +9,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.339.0
 	github.com/compliance-framework/agent v0.9.3
 	github.com/hashicorp/go-hclog v1.6.3
-	github.com/hashicorp/go-plugin v1.7.0
+	github.com/hashicorp/go-plugin v1.8.0
 )
 
 require (
