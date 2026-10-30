@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.2...v0.3.3) (2026-10-30)
+
+
+### Bug Fixes
+
+* **deps:** build with the go1.26.10 toolchain so Renovate can ship Go security fixes ([#40](https://github.com/compliance-framework/plugin-aws-vpc/issues/40)) ([c34d191](https://github.com/compliance-framework/plugin-aws-vpc/commit/c34d1919b4776eac017a33ee65176c64c2a775a4))
+* **deps:** update aws-sdk-go-v2 monorepo ([#38](https://github.com/compliance-framework/plugin-aws-vpc/issues/38)) ([2eedf54](https://github.com/compliance-framework/plugin-aws-vpc/commit/2eedf54504fa46cabc77df82d1f91e6161ca7d25))
+
 ## [0.3.2](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.1...v0.3.2) (2026-10-28)
 
 
