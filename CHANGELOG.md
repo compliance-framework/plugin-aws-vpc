@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.4](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.3...v0.3.4) (2026-11-06)
+
+
+### Bug Fixes
+
+* **deps:** update aws-sdk-go-v2 monorepo ([#47](https://github.com/compliance-framework/plugin-aws-vpc/issues/47)) ([ffb9b76](https://github.com/compliance-framework/plugin-aws-vpc/commit/ffb9b7679116735db2fcc9e90852c8d927cc1b0d))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/config to v1.33.11 ([#45](https://github.com/compliance-framework/plugin-aws-vpc/issues/45)) ([d1ad2e1](https://github.com/compliance-framework/plugin-aws-vpc/commit/d1ad2e1a34c54d3c0af0c781fa6ea0e33af853f0))
+* **deps:** update module github.com/aws/aws-sdk-go-v2/service/ec2 to v1.343.0 ([#48](https://github.com/compliance-framework/plugin-aws-vpc/issues/48)) ([d52157c](https://github.com/compliance-framework/plugin-aws-vpc/commit/d52157cd1187ef00decc2b7acdc96234a88e7c65))
+
 ## [0.3.3](https://github.com/compliance-framework/plugin-aws-vpc/compare/v0.3.2...v0.3.3) (2026-11-02)
 
 
